@@ -4,7 +4,6 @@ Created on Mon Mar 15 16:57:57 2021
 
 @author: Kunal
 """
-
 # Full Name, Age, Gender, Mobile Number, Email, BMI, Membership Duration in months (1, 3, 6, or 12)
 class Super_User:
     def __init__(self):
@@ -43,7 +42,7 @@ class Super_User:
         
     def create_regimen(self,BMI):
         self.regimen[BMI] = {}
-        if BMI<18.5:
+        if BMI<=18.5:
             self.regimen[BMI]["Mon"] = "Chest"
             self.regimen[BMI]["Tue"] = "Biceps"
             self.regimen[BMI]["Wed"] = "Rest"
@@ -99,11 +98,11 @@ A = Super_User()
 opt = True
 while(opt == True):
     print("Do you want to enter as User or Super User")
-    print("For user Press 1 and For Super user Press 2")
+    print("For super user Press 1 and regular user Press 2")
     val = int(input())
     if val == 1:
         sup = True
-        print("Congrats for Success full Login ans Super User!!")
+        print("Congrats for Success full Login as Super User!!")
         while(sup == True):
             if bool(A.member) == False:
                 name = input("Enter Name: ")
